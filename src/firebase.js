@@ -1,13 +1,15 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+const firebaseConfig = {
+    apiKey: "AIzaSyDZdtQbxtEwtwRbjZ_Qr8QsHa_VkNsBxhc",
+    authDomain: "messages-chat-app-156ea.firebaseapp.com",
+    projectId: "messages-chat-app-156ea",
+    storageBucket: "messages-chat-app-156ea.appspot.com",
+    messagingSenderId: "103300155973",
+    appId: "1:103300155973:web:f4f123dcc784700e73312c",
+    measurementId: "G-C29WK8QLGQ"
+};
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-export const auth = firebase.initializeApp({
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
-    measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-}).auth();
+export const auth = firebase.initializeApp({ ...firebaseConfig }).auth();

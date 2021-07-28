@@ -12,13 +12,13 @@ const Login = () => {
                 <h2>Welcome to Messages Chat App</h2>
 
                 <div
-                    className="login-btn google"
+                    className="login-button google"
                     onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
                 >
                     <GoogleOutlined className="google-icon" />Sign In with Google
                 </div>
                 <div
-                    className="login-btn facebook"
+                    className="login-button facebook"
                     onClick={() => auth.signInWithRedirect(new firebase.auth.FacebookAuthProvider())}
                 >
                     <FacebookOutlined className="facebook-icon" />Sign In with Facebook
